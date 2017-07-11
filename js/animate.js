@@ -1,3 +1,4 @@
+var timeout;
 //按标签时候，如果包含.task-item-del就选中,如果包含了就删除.task-item-del
 $(".task-list").on('mousedown','.task-item',function(){   //鼠标点击就开始定时器
 		var obj = $(this);
@@ -66,27 +67,31 @@ $(".mask").on("click",function(){
 
 //点击搜索图标，显示搜索框
 $(".scope").on("click",function(){
-	$(".welcomeMessage").animate({width:"2%"},200,function(){
+	$(".welcomeMessage").animate({width:"0"},200,function(){
 		$(".scope").hide(50);
 		$(".iconfont").show(50);
 		$(".welcomeMessage").val("");
-		$(".welcomeMessage").attr("placeholder","请输入关键词");});
-	$(".welcomeMessage").animate({width:"88%"},200);
-	$(".welcomeMessage").show(100);
-	$(".btn1").hide(200);
-	$(".btn7").show(200);
-	$(".welcomeMessage").addClass("on-search");
+		$(".welcomeMessage").attr("placeholder","请输入关键词");
+		//$(".welcomeMessage").show(100);
+		$(".welcomeMessage").animate({width:"100%"})
+		$(".btn1").fadeOut(300);
+		$(".btn7").fadeIn(300);
+		$(".welcomeMessage").addClass("on-search");
+	});
+	
 });
 
 //点击编辑图标，显示输入框
 $(".iconfont").on("click",function(){
-	$(".welcomeMessage").animate({width:"2%"},200,function(){
+	$(".welcomeMessage").animate({width:"0"},200,function(){
 		$(".iconfont").hide(50);
 		$(".scope").show(50);
-		$(".welcomeMessage").attr("placeholder","e.g.下午记得去买菜");});
-	$(".welcomeMessage").animate({width:"88%"},200);
-	$(".welcomeMessage").show(100);
-	$(".btn7").hide(200);
-	$(".btn1").show(200);
-	$(".welcomeMessage").removeClass("on-search");
+		$(".welcomeMessage").attr("placeholder","e.g.下午记得去买菜");
+		$(".welcomeMessage").animate({width:"100%"})
+		//$(".welcomeMessage").show(100);
+		$(".btn7").fadeOut(300);
+		$(".btn1").fadeIn(300);
+	});
+	
+	
 });
