@@ -144,8 +144,8 @@ button
 {
 	display: none;
 	position: absolute;
-	left: 700px;
-	top: -100px;
+	right: 0;
+	top: -50px;
 	width: 400px;
 	height: 430px;
 	color: black;
