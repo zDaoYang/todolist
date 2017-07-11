@@ -14,18 +14,25 @@
 <script src="https://cdn.bootcss.com/fingerprintjs/0.5.3/fingerprint.min.js"></script>
 </head>
 <body>
-<h1>my ToDo</h1>
+<h1>MY TODO</h1>
 <div class="mask"></div>
 <div class="container"> 
 	<div class="add-task">
-		<span class="scope"></span><span class="iconfont icon-task"></span>
-		<input  class="ipt1 welcomeMessage" type="text" placeholder="e.g.下午记得去买菜">
-		<button class="btn1">submit</button><button class="btn7" style="display: none">search</button>
+		<div class="control">
+			<span class="scope"></span>
+			<span class="iconfont icon-task"></span>
+		</div>
+		<input class="ipt1 welcomeMessage" type="text" placeholder="e.g.下午记得去买菜">
+		<div class="action">
+			<button class="btn1">SUBMIT</button>
+			<button class="btn7" style="display: none">SEARCH</button>
+		</div>
+		
 	</div>
 	<div class="task-list" id="task-list">   
 	</div> 
 	<div class="delete">
-	<button class="btn2" type="reset">delete</button>
+	<button class="btn2" type="reset">DEL</button>
 	</div>
 </div>
 
