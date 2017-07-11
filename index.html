@@ -2,34 +2,40 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>mytodoapp</title>
-<link href="http://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
-<link rel="stylesheet" href="index.css">
-<link href="http://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
-<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/icon.css">
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.wilddog.com/sdk/js/2.5.8/wilddog.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.bootcss.com/fingerprintjs/0.5.3/fingerprint.min.js"></script>
 </head>
-
 <body>
 <h1>my ToDo</h1>
 <div class="mask"></div>
-<div class="container"> <!--总容器开始-->
+<div class="container"> 
 	<div class="add-task">
-		<input id="ipt1" type="text" placeholder="e.g.下午记得去买菜"/>
-		<button id="btn1" type="submit">submit</button>
+		<span class="scope"></span><span class="iconfont icon-task"></span>
+		<input  class="ipt1 welcomeMessage" type="text" placeholder="e.g.下午记得去买菜">
+		<button class="btn1">submit</button><button class="btn7" style="display: none">search</button>
 	</div>
-	<div class="task-list" id="task-list">    <!--清单列表开始-->  
-
-	</div> <!--清单列表结束-->
+	<div class="task-list" id="task-list">   
+	</div> 
 	<div class="delete">
-	<button id="btn2" type="reset">delete</button>
+	<button class="btn2" type="reset">delete</button>
 	</div>
+</div>
 
-</div> <!--总容器结束-->
-<script src="index.js"></script>
-<script src="animate.js"></script>	
+<div class="confirmFrame">
+	<span class="ui-close"></span>
+	<p class="delete-info">确定删除吗？</p>
+	<p class="button-group"><button class="btn4">确定</button><button class="btn5">取消</button></p>
+</div>
+<script src="js/index.js"></script>
+<script src="js/animate.js"></script>	
 </body>
 </html>
 

@@ -1,0 +1,75 @@
+/*伪类实现关闭图标*/
+		.ui-close{
+			position: relative;
+			display: block;
+			top: 10px;
+			left: 360px;
+			width: 30px;
+			height: 30px;
+		}
+		.ui-close:hover{
+			cursor: pointer;
+		}
+		.ui-close::before,
+		.ui-close::after{
+			content: "";
+			position: absolute;
+			width: 80%;
+			top: 49%;
+			left: 10%;
+			height: 2px;
+			border-radius: 2px;
+			background: #aaa;
+		}
+		.ui-close::before{
+		  transform: rotate(45deg);
+		}
+		.ui-close::after{
+		  transform: rotate(-45deg);
+		}
+		.ui-close:hover::after,
+		.ui-close:hover::before{
+			background: #75B7E6;
+		}
+
+/*搜索图标*/
+		.scope{
+		    position: absolute;
+			display: block;
+			width: 20px;
+			height: 20px;
+			left: -40px;
+			top: 5px;
+			border: 2px solid #ddd;
+			border-radius: 50%;
+		}
+		.scope:hover{
+			cursor: pointer;
+			border-color: #75B7E6;
+		}
+		.scope::after{
+			position: absolute;
+			display: block;
+			content: "";
+			top: 18px;
+			left: 14px;
+			width: 15px;
+			height: 3px;
+			background-color: #ddd;
+			border-radius: 15px;
+			transform: rotate(45deg);
+		}
+		.scope:hover::after{
+			background-color: #75B7E6;
+		}
+/*输入图标*/
+.icon-task{
+	display: none;
+	position: absolute;
+	font-size: 35px;
+	left: -44px;
+	top: -2px;
+}
+.icon-task:hover{
+	color: #75B7E6;
+}
