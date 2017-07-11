@@ -22,7 +22,28 @@ body{
 .container{
 	max-width:900px;
 	margin: 0 auto;
+	position: relative;	
+	width: 100%;
+    padding: 0 20px;
+}
+.container .add-task{
+	padding: 0 85px 0 40px;	
 	position: relative;
+
+}
+.action{
+	position: absolute;
+	width:85px;
+	text-align: right;
+	top:0;
+	right: 0;
+}
+.control{
+	position: absolute;
+	width:40px;
+	text-align: left;
+	top:0;
+	left: 0;
 }
 h1
 {
@@ -63,22 +84,25 @@ button
 
 .btn4
 {
-	margin-right: 50px;
+	width:70px;
 	background: #46B1E4;
-	width: 70px;
+}
+button~button{
+	margin-left: 5px;
 }
 
 .btn4:hover
 {
 	background: #75B7E6;
 }
+.delete{
+	text-align: right;
+}
 .btn2
 {
 	display: none;
-	position: relative;
-	left: 801px;
 	background: #FF3939;
-	width: 98px;
+	width: 80px;
 }
 .btn2:hover
 {
@@ -97,7 +121,7 @@ button
 .btn3
 {
 	background: #46B1E4;
-	width: 80px;
+	width: 70px;
 }
 .btn3:hover
 {
@@ -106,11 +130,13 @@ button
 .task-list
 {
 	margin: 10px 0px;
+    padding: 0 0 0 40px;
 }
 .add-task[type=submit],.task-item
 {
 	box-shadow:0px 2px 10px rgba(0,0,0,0.5); 
 }
+
 .task-item
 {
 	position: relative;
@@ -133,7 +159,8 @@ button
 {
 	color: #007CCC;
 	position: absolute;
-	left: 830px;
+	/*left: 830px;*/
+	right: 15px;
 	transition: font-weight 0.2s;
 }
 .task-detail:hover
@@ -145,9 +172,8 @@ button
 	display: none;
 	position: absolute;
 	right: 0;
-	top: -50px;
+	top: 0;
 	width: 400px;
-	height: 430px;
 	color: black;
 	background-color: #fff;
 	border-radius: 5px;
@@ -182,11 +208,12 @@ textarea.desc{
 .confirmFrame{
 	display: none;
 	z-index: 2;
-	position: fixed;
-	top: 150px;
-	left: 575px;
 	width: 400px;
 	height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 	color: #000000;
 	background-color: #ffffff;
 	border-radius: 5px;
@@ -206,17 +233,13 @@ p.button-group{
 }
 
 
-.btn1{
-	float: right;
-    right: 103px;
-	background-color: #46B1E4;
-	width: 98px;
-}
-.btn7{
-	/*margin-left: 104px;*/
-	float: right;
+
+.btn1,.btn7{
+	width:80px;
 	background: #46B1E4;
-	width: 98px;
+	top: 0;
+    right: 0;
+    position: absolute;
 }
 .btn1:hover,
 .btn7:hover
@@ -227,7 +250,7 @@ input.welcomeMessage
 {
 	border: 0;
 	display: inline-block;
-	width: 88%;
+	width: 100%;
 	background: #ddd;
 	box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
